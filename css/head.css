@@ -1,0 +1,100 @@
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+body {
+    margin : 0px;
+    padding: 0;
+    background-color: antiquewhite;
+}
+
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+    padding: 20px; /* Relleno del encabezado */
+    margin: 0; /* Margen superior del encabezado */
+}
+footer {
+
+    padding: 20px; /* Espaciado interior del footer */
+    text-align: center; /* Alineación del texto en el centro */
+    margin-left: auto; /* Centrado horizontal */
+    margin-right: auto; /* Centrado horizontal */
+   
+}
+table{
+    border: solid rgb(75, 199, 37) 1px;
+    border-collapse: collapse;
+}
+tr {
+    background-color: rgb(157, 201, 69);
+    border: 1px solid;
+    padding: 8px;
+    border-color:  rgb(1, 71, 21);
+}
+td{
+    border: solid rgb(3, 57, 10) 5px;
+    text-align: center;
+    width: 500px;
+}
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.contenido {
+
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+}
+.galeria{
+    display:flex;
+    width: 600px;
+    height: 430px;
+    margin: 10px;
+
+}
+.galeria {
+    display: flex;
+    width: 1500px;
+    height: 430px;
+    margin: 10px;
+}
+
+.galeria a {
+    display: flex; /* Mostrar los enlaces en línea uno al lado del otro */
+    width: 0px;
+    flex-grow: 1; /* Ajusta el ancho de cada imagen */
+    object-fit: cover;
+    opacity: 1;
+    transition: .5s ease; /* Cambio suave de la propiedad */
+}
+.galeria a :hover{
+    cursor: crosshair;
+    width: 300px; /* Ancho aumentado al hacer hover */
+    opacity: 1;
+    filter: contrast(120%);
+}
+.galeria a img{
+    width: 10px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 1;
+    transition: .5s ease; /* Cambio suave de la propiedad */
+}
+
+.galeria a img:hover {
+    cursor: crosshair;
+    width: 300px; /* Ancho aumentado al hacer hover */
+    opacity: 1;
+    filter: contrast(120%);
+}
