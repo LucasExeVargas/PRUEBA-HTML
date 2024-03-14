@@ -1,12 +1,50 @@
-.formulario{
-   display: flex;
-   flex-wrap: wrap;
-   width: 630px; 
-   align-items: center;
-   
-}
-.dataTarjeta{
+/* Estilos generales */
+.formulario {
     display: flex;
     flex-wrap: wrap;
     width: 630px; 
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dataTarjeta {
+    display: flex;
+    flex-wrap: wrap;
+    width: 630px; 
+}
+
+/* Estilos para los select */
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos adicionales */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: calc(100% - 10px); /* Resta el ancho del padding */
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
