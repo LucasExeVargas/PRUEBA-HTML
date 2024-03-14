@@ -1,0 +1,12 @@
+.formulario{
+   display: flex;
+   flex-wrap: wrap;
+   width: 630px; 
+   align-items: center;
+   
+}
+.dataTarjeta{
+    display: flex;
+    flex-wrap: wrap;
+    width: 630px; 
+}
