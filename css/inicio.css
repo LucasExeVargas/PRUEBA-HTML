@@ -1,113 +1,125 @@
+
+header {
+  background-color: #333; /* Color de fondo del encabezado */
+  color: rgb(255, 255, 255); /* Color del texto del encabezado */
+  padding: 20px; /* Relleno del encabezado */
+  margin: 0; /* Margen superior del encabezado */
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.card {
+  width: 17em;
+  height: 22.5em;
+  background: #171717;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+
+.card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.72em;
+  margin: 1em;
+}
+
+.card .img {
+  width: 4.8em;
+  height: 4.8em;
+  background-size: cover; /* Añadido */
+  border-radius: 15px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .img {
+  background-image: url('ruta/a/tu/imagen.jpg'); /* Añade la ruta de tu imagen */
+}
+
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.card a:hover {
+  color: red;
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.card button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-    position: relative;
-    width: 190px;
-    height: 254px;
-  }
-  
-  .card {
-    position: relative;
-    width: 190px;
-    height: 254px;
-    background: #f5f5f5;
-    border-radius: 8px;
-    color: #232323;
-    padding: 16px;
-    border: 1px solid #232323;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-    overflow: hidden;
-  }
-  
-  .card-hidden {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transform: translateY(200%);
-        -ms-transform: translateY(200%);
-            transform: translateY(200%);
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: .5rem;
-    -webkit-transition: opacity .3s ease-in, -webkit-transform .5s ease-in;
-    transition: opacity .3s ease-in, -webkit-transform .5s ease-in;
-    transition: transform .5s ease-in, opacity .3s ease-in;
-    transition: transform .5s ease-in, opacity .3s ease-in, -webkit-transform .5s ease-in;
-    opacity: 0;
-  }
-  
-  .card-border {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    border: 1px dashed #232323;
-    border-radius: 8px;
-    z-index: -1;
-  }
-  
-  /*Hovers*/
-  .card:hover {
-    -webkit-transform: translate(-15px, -15px);
-        -ms-transform: translate(-15px, -15px);
-            transform: translate(-15px, -15px);
-    border-color: #5bc0eb;
-  }
-  
-  .card:hover .card-hidden {
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-  
-  .card:hover .title {
-    -webkit-transform: translateY(200%);
-        -ms-transform: translateY(200%);
-            transform: translateY(200%);
-  }
-  
-  /*Text*/
-  .title {
-    position: absolute;
-    bottom: 0rem;
-    font-weight: 800;
-    font-size: 1.5rem;
-    -webkit-transition: -webkit-transform .25s ease-out;
-    transition: -webkit-transform .25s ease-out;
-    transition: transform .25s ease-out;
-    transition: transform .25s ease-out, -webkit-transform .25s ease-out;
-  }
-  .title-in{
-    font-weight: 700;
-    font-size: 1.25rem;
-  }
-  
-  /*Button*/
-  .button {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 8px;
-    border-radius: 24px;
-    font-weight: 600;
-    background-color: #5bc0eb;
-    cursor: pointer;
-    -webkit-transition: background-color .3s ease-in-out;
-    transition: background-color .3s ease-in-out;
-  }
-  
-  .button:hover {
-    background-color: #53aed4;
-  }
-  
-  
-  
-  
-  
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; Esto asegurará que el contenedor ocupe toda la altura de la pantalla */
+
+  width: 100%;
+  height: 100%;
+  --s: 200px; /* control the size */
+  --c1: #414141;
+  --c2: #bebebe;
+  --c3: #ffffff;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
